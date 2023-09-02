@@ -13,7 +13,7 @@ const App = () => {
     return (
         <div className={classNames('app', {}, [theme])}>
             <button onClick={toggleTheme}>TOGGLE THEME</button>
-            <Link to={'/'}>Главная страница</Link>
+            <Link to={'/'}>Главная страница1</Link>
             <Link to={'/about'}>Информация</Link>
             <Suspense fallback={<div>Loading...</div>}>
                 <Routes>
