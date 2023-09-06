@@ -8,6 +8,7 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration {
         port: options.port,
         open: true,
         //настройка навигации: убираем ошибку после обновления страницы, когда находимся на /about
-        historyApiFallback: true
+        historyApiFallback: true,
+        hot: true
     }
 }
