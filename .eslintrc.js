@@ -1,7 +1,8 @@
 module.exports = {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        jest: true
     },
     "extends": [
         "standard-with-typescript",
@@ -41,6 +42,7 @@ module.exports = {
         "no-shadow": 'off',
         "react/no-deprecated": 'off',
         "@typescript-eslint/naming-convention": 'off',
-        'i18next/no-literal-string': ['error', { marlupOnly: true } ]
+        'i18next/no-literal-string': ['error', { marlupOnly: true } ],
+        "max-len": ['error', { ignoreComments: true }]
     },
 }
