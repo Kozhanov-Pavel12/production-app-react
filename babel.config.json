@@ -2,5 +2,5 @@
     "presets": ["@babel/preset-env"],
     "plugins": [
         "i18next-extract"
-      ]
+    ]
 }
