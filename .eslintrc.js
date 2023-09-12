@@ -42,7 +42,7 @@ module.exports = {
         "no-shadow": 'off',
         "react/no-deprecated": 'off',
         "@typescript-eslint/naming-convention": 'off',
-        'i18next/no-literal-string': ['error', { marlupOnly: true } ],
+        'i18next/no-literal-string': ['error', { marlupOnly: true, ignoreAttribute: ['data-testid'] } ],
         "max-len": ['error', { ignoreComments: true }]
     },
 }
