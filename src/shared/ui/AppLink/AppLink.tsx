@@ -3,6 +3,7 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './AppLink.module.scss'
 import { Link, type LinkProps } from 'react-router-dom'
 import { type FC } from 'react'
+import { BrowserRouter } from 'react-router-dom'
 
 export enum AppLinkTheme {
   PRIMARY = 'primary',
@@ -24,6 +25,7 @@ export const AppLink: FC<AppLinkProps> = (props) => {
   } = props
 
   return (
+    <BrowserRouter>
       <Link
             to={to}
             className={classNames(cls.AppLink, {}, [className, cls[theme]])}
@@ -31,5 +33,6 @@ export const AppLink: FC<AppLinkProps> = (props) => {
         >
           {children}
       </Link>
+    </BrowserRouter> 
   )
 }
