@@ -12,13 +12,10 @@ interface NavbarProps {
 export const Navbar = ({ className }: NavbarProps) => {
   const { t } = useTranslation('navigation')
   return (
-    <BrowserRouter>
       <div className={classNames(cls.Navbar, {}, [className])}>
           <div className={cls.links}>
-              <AppLink theme={AppLinkTheme.SECONDARY} to={'/'} className={cls.mainLink}>{t('Главная страница')}</AppLink>
-              <AppLink theme={AppLinkTheme.SECONDARY} to={'/about'}>{t('ИнформациЯ')}</AppLink>
+            /
           </div>
       </div>
-    </BrowserRouter>
   )
 }

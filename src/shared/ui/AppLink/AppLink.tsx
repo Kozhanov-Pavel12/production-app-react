@@ -33,6 +33,6 @@ export const AppLink: FC<AppLinkProps> = (props) => {
         >
           {children}
       </Link>
-    </BrowserRouter> 
+    </BrowserRouter>
   )
 }
