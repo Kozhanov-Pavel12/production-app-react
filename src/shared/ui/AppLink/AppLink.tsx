@@ -25,7 +25,6 @@ export const AppLink: FC<AppLinkProps> = (props) => {
   } = props
 
   return (
-    <BrowserRouter>
       <Link
             to={to}
             className={classNames(cls.AppLink, {}, [className, cls[theme]])}
@@ -33,6 +32,5 @@ export const AppLink: FC<AppLinkProps> = (props) => {
         >
           {children}
       </Link>
-    </BrowserRouter>
   )
 }
