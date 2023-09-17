@@ -5,7 +5,8 @@ import { type BuildOptions } from './types/config'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
 export function buildPlugins ({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
-  return [
+
+  const plugins = [
     new HtmlWebpackPlugin({ template: paths.html }),
     // для информирования и процессе сборки
     new webpack.ProgressPlugin(),
@@ -22,4 +23,15 @@ export function buildPlugins ({ paths, isDev }: BuildOptions): webpack.WebpackPl
       openAnalyzer: false
     })
   ]
+
+  if (isDev) {
+    plugins.push(
+      new webpack.HotModuleReplacementPlugin(),
+      // Анализировать размер бандла
+      new BundleAnalyzerPlugin({
+        openAnalyzer: false
+    }))
+  }
+  
+  return plugins;
 }
