@@ -25,7 +25,8 @@ export function buildPlugins ({ paths, isDev }: BuildOptions): webpack.WebpackPl
       // Анализировать размер бандла
       new BundleAnalyzerPlugin({
         openAnalyzer: false
-    }))
+      })
+    )
   }
   
   return plugins;
