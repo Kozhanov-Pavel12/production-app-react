@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Modal } from 'shared/ui/Modal/Modal'
 import { Button, ThemeButton } from 'shared/ui/Button/Button'
-import { useCallback, useState } from 'react'
+import { memo, useCallback, useState } from 'react'
 import { LoginModal, getUserAuthData } from 'features/AuthByUsername'
 import { useDispatch, useSelector } from 'react-redux'
 import { userActions } from 'entities/User'
@@ -15,7 +15,7 @@ interface NavbarProps {
   className?: string
 }
 
-export const Navbar = ({ className }: NavbarProps) => {
+export const Navbar = memo(({ className }: NavbarProps) => {
   const { t } = useTranslation('navigation')
   const [isAuthModal, setIsAuthModal] = useState(false)
 
@@ -63,4 +63,4 @@ export const Navbar = ({ className }: NavbarProps) => {
           {isAuthModal && <LoginModal isOpen={isAuthModal} onClose={onCloseAuthModal}/>}
       </div>
   )
-}
+})
