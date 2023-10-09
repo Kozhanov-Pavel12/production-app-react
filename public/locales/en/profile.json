@@ -1,6 +1,19 @@
 {
-    "Профиль пользователя": "Profile",
+    "Профиль": "Profile",
     "Редактировать": "Edit",
     "Ваше имя": "Your name",
-    "Ваша фамилия": "Your surname"
+    "Ваша фамилия": "Your surname",
+    "Город": "Сity",
+    "Ваш возраст": "Your age",
+    "Аватар": "Avatar",
+    "Имя пользователя": "Username",
+    "Укажите валюту": "Currency",
+    "Укажите страну": "Country",
+    "Сохранить": "Save",
+    "Отменить": "Discard",
+    "Имя или фамилия обязательны": "Name and Surname are required",
+    "Некорректный возраст": "Incorrect Age",
+    "Некорректный регион": "Incorrect district",
+    "Нет данных": "No data",
+    "Серверная ошибка при сохранении": "Server error"
 }
