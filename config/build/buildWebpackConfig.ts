@@ -16,7 +16,8 @@ export function buildWebpackConfig (options: BuildOptions): webpack.Configuratio
       filename: '[name].[contenthash].js',
       path: paths.build,
       // чистим папку build при каждом npx webpack
-      clean: true
+      clean: true,
+      publicPath: '/'
     },
     plugins: buildPlugins(options),
     // позволяет увидеть, где и в каком файле произошла ошибка

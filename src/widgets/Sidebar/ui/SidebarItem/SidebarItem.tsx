@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { memo } from 'react';
 import { useSelector } from 'react-redux';
-import { getUserAuthData } from 'features/AuthByUsername';
+import { getUserAuthData } from 'entities/User';
 
 interface SidebarItemProps {
     item: SidebarItemType

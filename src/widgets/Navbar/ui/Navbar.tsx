@@ -7,9 +7,9 @@ import { useTranslation } from 'react-i18next'
 import { Modal } from 'shared/ui/Modal/Modal'
 import { Button, ThemeButton } from 'shared/ui/Button/Button'
 import { memo, useCallback, useState } from 'react'
-import { LoginModal, getUserAuthData } from 'features/AuthByUsername'
+import { LoginModal } from 'features/AuthByUsername'
 import { useDispatch, useSelector } from 'react-redux'
-import { userActions } from 'entities/User'
+import { getUserAuthData, userActions } from 'entities/User'
 
 interface NavbarProps {
   className?: string
