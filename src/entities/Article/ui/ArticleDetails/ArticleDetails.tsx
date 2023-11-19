@@ -18,6 +18,7 @@ import { ArticleBlock, ArticleBlockType } from '../../model/types/article';
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
+import { useTranslation } from 'react-i18next';
 
 interface ArticleDetailsProps {
     className?: string;
@@ -29,7 +30,7 @@ const reducers: ReducersList = {
 }
 
 export const ArticleDetails = memo((props: ArticleDetailsProps) => {
-
+    const { t } = useTranslation('article')
     const { className, id } = props
     const dispatch = useAppDispatch()
 
@@ -90,7 +91,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
         content = (
             <Text 
                 align={TextAlign.CENTER} 
-                title={'Произошла ошибка при загрузке данных'}
+                title={t('Произошла ошибка при загрузке данных')}
             />
         )
     } else {
